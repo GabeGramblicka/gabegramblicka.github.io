@@ -1,10 +1,36 @@
+/* Classes */
+img.tugboatterror
+{
+    float: inline-start;
+}
+.container
+{
+    margin: 50px;
+}
+.menu
+{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+.center 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 h1 
 {
     font-family: 'Yu Gothic';
     font-size: 400%;
     color: rgb(31, 30, 27);
-    margin: 50px;
-    background:rgb(218, 213, 197); 
+    margin-bottom: 150px;
+    text-align: left;
+}
+h2
+{
+    font-family: 'Yu Gothic';
+    color: rgb(31, 30, 27);
     text-align: left;
 }
 body
@@ -14,7 +40,7 @@ body
 }
 p
 {
-    font-family: 'Arial';
+    font-family: 'Yu Gothic';
+    font-size: 105%;
     color: rgb(31, 30, 27);
-    margin: 50px;
 }
