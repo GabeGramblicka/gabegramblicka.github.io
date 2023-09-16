@@ -6,6 +6,12 @@
     margin-right: 50px;
     border-radius: 12px;
 }
+.codeText
+{
+    float: right; 
+    margin-left: 50px;
+    margin-top: -60px;
+}
 .container
 {
     margin: 50px;
@@ -33,7 +39,7 @@
 {
     background-color: #57544a75;
     border: none;
-    color: white;
+    color: #e6e2d8;
     padding: 10px 34px;
     text-align: center;
     text-decoration: none;
