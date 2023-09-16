@@ -7,7 +7,7 @@
 }
 #section2
 {
-    height: 500px;
+    height: 200px;
     background-color: rgb(158, 149, 121);
 }
 #section3
@@ -89,6 +89,7 @@ html
 }
 h1 
 {
+    zoom: 100%;
     font-family: 'Yu Gothic';
     font-size: 500%;
     color: rgb(31, 30, 27);
@@ -99,6 +100,7 @@ h1
 }
 h2
 {
+    zoom: 100%;
     margin-left: 55px;
     float: none;
     font-family: 'Yu Gothic';
@@ -107,11 +109,15 @@ h2
 }
 body
 {
+    user-zoom:fixed ;
     background:rgb(218, 213, 197); 
     text-align: left;
+    margin-bottom: 400px;
+    zoom: 100%;
 }
 p
 {
+    zoom: 100%;
     float: left;
     margin-left: 0.5%;
     margin-right: 0.5%;
