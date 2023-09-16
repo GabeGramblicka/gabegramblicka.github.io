@@ -1,17 +1,31 @@
 /* Classes */
 img.tugboatterror
 {
-    float: inline-start;
 }
 .container
 {
     margin: 50px;
 }
+.games
+{
+    float: left;
+    margin-top: 50px;
+    margin-inline-start: 20px;
+    margin-inline-end: 10px;
+}
+.contact
+{
+    margin-top: 50px;
+    float: left;
+    margin-inline: 20px;
+}
 .menu
 {
-    display: flex;
-    justify-content: right;
-    align-items: right;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 .center 
 {
@@ -24,11 +38,12 @@ h1
     font-family: 'Yu Gothic';
     font-size: 400%;
     color: rgb(31, 30, 27);
-    margin-bottom: 150px;
     text-align: left;
+    float: left;
 }
 h2
 {
+    float: none;
     font-family: 'Yu Gothic';
     color: rgb(31, 30, 27);
     text-align: left;
@@ -40,6 +55,8 @@ body
 }
 p
 {
+    float: none;
+    text-align: left;
     font-family: 'Yu Gothic';
     font-size: 105%;
     color: rgb(31, 30, 27);
