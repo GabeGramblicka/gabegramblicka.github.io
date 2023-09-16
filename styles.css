@@ -1,6 +1,10 @@
 /* Classes */
-img.tugboatterror
+.me
 {
+    float: left;
+    width: 200px;
+    margin-right: 50px;
+    border-radius: 12px;
 }
 .container
 {
@@ -9,37 +13,42 @@ img.tugboatterror
 .games
 {
     float: left;
-    margin-top: 75px;
-    margin-inline-start: 200px;
-    margin-inline-end: 100px;
+    margin-top: 20px;
+    margin-inline-start: 100px;
+    margin-inline-end: 20px;
 }
-.Button
+.code
 {
-    color: inherit;
-    text-decoration-line: none;
-}
-Button:hover
-{
-    background-color: #42403e8f;
-}
-button 
-{
-    border: none;
-	padding: 10px 20px;
-	background: #42403e3f;
-	color: #fff;
-	font-family: 'TitilliumText22LRegular', Arial, sans-serif;
-	font-size: 1.1em;
-	border-radius: 0px;
-    width: 200px;
+    float: left;
+    margin-top: 20px;
+    margin-inline: 20px;
 }
 .contact
 {
-    margin-top: 75px;
     float: left;
+    margin-top: 20px;
     margin-inline: 20px;
 }
-.clearfix::after {
+.button 
+{
+    background-color: #57544a75;
+    border: none;
+    color: white;
+    padding: 10px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 200px;
+    font-family: 'Yu Gothic';
+    cursor: pointer;
+    border-radius: 16px;
+}
+.button:hover
+{
+    background-color:#57544aaf;
+}
+.clearfix {
     content: "";
     display: table;
     clear: both;
@@ -53,13 +62,17 @@ button
 h1 
 {
     font-family: 'Yu Gothic';
-    font-size: 400%;
+    font-size: 500%;
     color: rgb(31, 30, 27);
     text-align: left;
+    margin-top: -20px;
+    margin-bottom: -8px;
     float: left;
 }
 h2
 {
+    margin-left: 0.5%;
+    margin-right: 0.5%;
     float: none;
     font-family: 'Yu Gothic';
     color: rgb(31, 30, 27);
@@ -72,7 +85,9 @@ body
 }
 p
 {
-    float: none;
+    float: left;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
     text-align: left;
     font-family: 'Yu Gothic';
     font-size: 105%;
