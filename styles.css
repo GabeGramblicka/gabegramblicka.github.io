@@ -9,18 +9,35 @@ img.tugboatterror
 .games
 {
     float: left;
-    margin-top: 50px;
-    margin-inline-start: 20px;
-    margin-inline-end: 10px;
+    margin-top: 75px;
+    margin-inline-start: 200px;
+    margin-inline-end: 100px;
+}
+.Button
+{
+    color: inherit;
+    text-decoration-line: none;
+}
+Button:hover
+{
+    background-color: #42403e8f;
+}
+button 
+{
+    border: none;
+	padding: 10px 20px;
+	background: #42403e3f;
+	color: #fff;
+	font-family: 'TitilliumText22LRegular', Arial, sans-serif;
+	font-size: 1.1em;
+	border-radius: 0px;
+    width: 200px;
 }
 .contact
 {
-    margin-top: 50px;
+    margin-top: 75px;
     float: left;
     margin-inline: 20px;
-}
-.menu
-{
 }
 .clearfix::after {
     content: "";
