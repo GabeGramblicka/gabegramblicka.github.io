@@ -8,10 +8,11 @@
 #section2
 {
     height: 200px;
-    background-color: rgb(158, 149, 121);
+    background-color: rgba(180, 171, 145, 0.171);
 }
 #section3
 {
+    margin-top: 200px;
     height: 1000px;
     margin: -20px;
     margin-bottom: -00px;
