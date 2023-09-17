@@ -180,6 +180,11 @@ p
         margin-right: 10px;
         margin-bottom: 50px;
     }
+    .tugboatterror
+    {
+        float: none;
+        width: 100%;
+    }
 }
 @media screen and (max-width: 900px)
 {
