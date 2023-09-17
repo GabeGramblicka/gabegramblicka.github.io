@@ -157,10 +157,14 @@ p
     {
         display: none;
     }
+    .container
+    {
+        margin-right: 10px;
+    }
     .meString
     {
-        margin-right: auto;
-        margin-left: auto;
+        margin-right: 0;
+        margin-left: 0;
         font-size: 80%;
     }
 }
