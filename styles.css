@@ -143,8 +143,6 @@ p
         margin: none;
         float: none;
         text-align: center; 
-        display: inline-block;
-        margin-left: auto;
     }
     .button
     {
