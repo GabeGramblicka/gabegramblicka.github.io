@@ -138,12 +138,13 @@ p
         margin-top: 20%;
         background-color: rgb(218, 213, 197);
     }
-    h1
+    .title
     {
         margin: none;
         float: none;
         text-align: center; 
         display: inline-block;
+        margin-left: auto;
     }
     .button
     {
