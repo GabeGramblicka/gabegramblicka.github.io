@@ -30,7 +30,9 @@
 }
 .tugboatterror
 {
-   
+    margin-top: -160px;
+    margin-right: 50px;
+    float: right;
 }
 .codeText
 {
@@ -211,6 +213,8 @@ p
     {
         float: none;
         width: 100%;
+        margin-top: 0px;
+        margin-right: 0px;
     }
 }
 @media screen and (max-width: 900px)
