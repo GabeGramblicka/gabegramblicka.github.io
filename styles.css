@@ -26,7 +26,7 @@
 {
     float: left;
     width: 200px;
-    margin-right: 50px;
+    margin-right: 20px;
     border-radius: 12px;
 }
 .codeText
@@ -161,7 +161,11 @@ p
     {
         margin-right: 0;
         margin-left: 0;
-        font-size: 80%;
+        font-size: 90%;
+    }
+    .me
+    {
+        margin-right: 10px;
     }
 }
 @media screen and (max-width: 900px)
