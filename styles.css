@@ -90,6 +90,14 @@ html
 {
     background-color:#57544aaf;
 }
+.tugboatterror:hover
+{
+    opacity: 0.6;
+}
+.me:hover
+{
+    opacity: 0.6;
+}
 .clearfix {
     content: "";
     display: table;
