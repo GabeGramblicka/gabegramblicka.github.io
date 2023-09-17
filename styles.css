@@ -131,9 +131,13 @@ p
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
     .codeText
     {
         display: none
+    }
+    #section2
+    {
+        height: 2000px;
     }
 }
