@@ -62,6 +62,12 @@ html
     margin-left: 10px;
     margin-right: 10px;
 }
+.aboutMe
+{
+    font-size: 255%; 
+    margin-top: 50px;
+    text-align: left;
+}
 .button:hover
 {
     background-color:#57544aaf;
@@ -123,6 +129,7 @@ p
     }
     #section2
     {
+        margin-top: 20%;
         background-color: rgb(218, 213, 197);
     }
     h1
@@ -137,11 +144,26 @@ p
         margin-right: -35px;
         width: 100%;
     }
+    .aboutMe
+    {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 900px)
+{
+    .aboutMe
+    {
+        align-items: center;
+    }
 }
 @media screen and (max-width: 770px)
 {
     #section1
     {
         height: 300px;
+    }
+    h1
+    {
+        margin-top: -20%;
     }
 }
