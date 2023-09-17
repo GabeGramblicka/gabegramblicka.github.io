@@ -73,6 +73,12 @@ html
     font-size: 255%; 
     margin-top: 50px;
 }
+.myGames
+{
+    margin-top: 50px;
+    font-size: 255%; 
+    margin-left: 50px;
+}
 .meString
 {
     margin-right: 100px; 
@@ -167,6 +173,10 @@ p
     .aboutMe
     {
        margin-left: auto;
+    }
+    .myGames
+    {
+        margin-left: auto;
     }
     #section1
     {
