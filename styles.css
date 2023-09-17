@@ -30,9 +30,7 @@
 }
 .tugboatterror
 {
-    margin-top: 50px;
-    margin-right: 50px;
-    float: right;
+   
 }
 .codeText
 {
@@ -81,6 +79,14 @@ html
 }
 .meString
 {
+    margin-right: 100px; 
+    margin-left: 50px;
+    font-size: 130%; 
+    margin-bottom: -600px;
+}
+.gameString
+{
+    width: 100%;
     margin-right: 100px; 
     margin-left: 50px;
     font-size: 130%; 
@@ -135,7 +141,7 @@ body
     user-zoom:fixed ;
     background:rgb(218, 213, 197); 
     text-align: left;
-    margin-bottom: 1500px;
+    margin-bottom: 700px;
     zoom: 100%;
 }
 p
