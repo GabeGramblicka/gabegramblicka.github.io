@@ -18,12 +18,10 @@
     margin-bottom: -00px;
     background-color: rgb(218, 213, 197);
 }
-@media only screen and (max-width: 620px) {
-    /* For mobile phones: */
-    .me, .container, .button {
-      width: 2000%;
-    }
-  }
+.title
+{
+    text-align: left;
+}
 .me
 {
     float: left;
@@ -45,25 +43,6 @@ html
 {
     scroll-behavior: smooth;
 }
-.games
-{
-    float: left;
-    margin-top: 20px;
-    margin-inline-start: 100px;
-    margin-inline-end: 20px;
-}
-.code
-{
-    float: left;
-    margin-top: 20px;
-    margin-inline: 20px;
-}
-.contact
-{
-    float: left;
-    margin-top: 20px;
-    margin-inline: 20px;
-}
 .button 
 {
     background-color: #57544a75;
@@ -72,12 +51,16 @@ html
     padding: 10px 34px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 20px;
     width: 200px;
     font-family: 'Yu Gothic';
     cursor: pointer;
     border-radius: 16px;
+
+    float: right;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .button:hover
 {
@@ -96,11 +79,9 @@ html
 }
 h1 
 {
-    zoom: 100%;
     font-family: 'Yu Gothic';
     font-size: 500%;
     color: rgb(31, 30, 27);
-    text-align: left;
     margin-top: -20px;
     margin-bottom: 80px;
     float: left;
@@ -132,4 +113,27 @@ p
     font-family: 'Yu Gothic';
     font-size: 105%;
     color: rgb(31, 30, 27);
+}
+@media screen and (max-width: 1600px) {
+    .button
+    {
+        margin-right: -35px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1600px) {
+    h1
+    {
+        margin: none;
+        float: none;
+        text-align: center; 
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .codeText
+    {
+        display: none
+    }
 }
