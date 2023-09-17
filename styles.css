@@ -18,6 +18,12 @@
     margin-bottom: -00px;
     background-color: rgb(218, 213, 197);
 }
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .me, .container, .button {
+      width: 2000%;
+    }
+  }
 .me
 {
     float: left;
