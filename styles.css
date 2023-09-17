@@ -42,6 +42,7 @@
 html 
 {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 .button 
 {
@@ -66,7 +67,7 @@ html
 {
     font-size: 255%; 
     margin-top: 50px;
-    text-align: left;
+    margin-right: 5%;
 }
 .button:hover
 {
@@ -81,7 +82,6 @@ html
 {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 h1 
 {
