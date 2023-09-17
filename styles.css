@@ -114,14 +114,17 @@ p
     font-size: 105%;
     color: rgb(31, 30, 27);
 }
-@media screen and (max-width: 1600px) {
-    .button
+
+@media screen and (max-width: 1600px) 
+{
+    .codeText
     {
-        margin-right: -35px;
-        width: 100%;
+        display: none
     }
-}
-@media screen and (max-width: 1600px) {
+    #section2
+    {
+        background-color: rgb(218, 213, 197);
+    }
     h1
     {
         margin: none;
@@ -129,15 +132,16 @@ p
         text-align: center; 
         display: inline-block;
     }
-}
-
-@media screen and (max-width: 1600px) {
-    .codeText
+    .button
     {
-        display: none
+        margin-right: -35px;
+        width: 100%;
     }
-    #section2
+}
+@media screen and (max-width: 770px)
+{
+    #section1
     {
-        height: 2000px;
+        height: 300px;
     }
 }
