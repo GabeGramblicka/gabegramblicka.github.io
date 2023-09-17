@@ -144,11 +144,14 @@ p
     }
     #section2
     {
+        background:rgb(218, 213, 197); 
         height: 600px;
     }
     #section3
     {
+        background:rgb(218, 213, 197); 
         margin-top: 50%;
+        margin-bottom: 50px;
     }
     .title
     {
