@@ -118,7 +118,7 @@ html
 }
 h1 
 {
-    font-family: 'Yu Gothic';
+    font-family: 'Helvetica';
     font-size: 500%;
     color: rgb(31, 30, 27);
     margin-top: -20px;
@@ -130,7 +130,7 @@ h2
     zoom: 100%;
     margin-left: 55px;
     float: none;
-    font-family: 'Yu Gothic';
+    font-family: 'Helvetica';
     color: rgb(31, 30, 27);
     text-align: left;
 }
