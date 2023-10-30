@@ -136,7 +136,10 @@ h2
 }
 h3
 {
-
+    font-weight: 500;
+    font-family: 'Yu Gothic';
+    font-size: 110%;
+    color: rgb(31, 30, 27);
 }
 body
 {
