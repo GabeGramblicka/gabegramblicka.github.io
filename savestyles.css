@@ -1,0 +1,239 @@
+#section1 
+{
+    height: 200px;
+    margin: -10px;
+    margin-bottom: -200px;
+    background-color: rgba(180, 171, 145, 0.514);
+}
+#section2
+{
+    height: 200px;
+    /*background-color: rgba(180, 171, 145, 0.171);*/
+}
+#section3
+{
+    position: relative;
+    margin-top: 50px;
+    height: 1000px;
+    /*background-color: rgba(180, 171, 145, 0.171);*/
+}
+.title
+{
+    text-align: left;
+}
+.me
+{
+    float: left;
+    width: 220px;
+    margin-right: 20px;
+    border-radius: 12px;
+}
+.tugboatterror
+{
+    margin-top: -160px;
+    margin-right: 100px;
+    float: right;
+}
+.codeText
+{
+    float: right; 
+    margin-left: 50px;
+    margin-top: -25px;
+}
+.container
+{
+    margin: 50px;
+}
+html 
+{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.button 
+{
+    background-color: #57544a75;
+    border: none;
+    color: #e6e2d8;
+    padding: 10px 34px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    width: 200px;
+    font-family: 'Yu Gothic';
+    cursor: pointer;
+    border-radius: 16px;
+
+    float: right;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.aboutMe
+{
+    font-size: 255%; 
+    margin-top: 50px;
+}
+.myGames
+{
+    margin-top: 50px;
+    font-size: 255%; 
+    margin-left: 50px;
+}
+.meString
+{
+    margin-right: 100px; 
+    margin-left: 50px;
+    font-size: 130%; 
+    margin-bottom: -600px;
+}
+.gameString
+{
+    width: 100%;
+    margin-right: 100px; 
+    margin-left: 50px;
+    font-size: 160%; 
+    margin-bottom: -600px;
+}
+.button:hover
+{
+    background-color:#57544aaf;
+}
+.tugboatterror:hover
+{
+    opacity: 0.6;
+}
+.me:hover
+{
+    opacity: 0.6;
+}
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+.center 
+{
+    display: flex;
+    justify-content: center;
+}
+h1 
+{
+    font-family: 'Helvetica';
+    font-size: 500%;
+    color: rgb(31, 30, 27);
+    margin-top: -20px;
+    margin-bottom: 80px;
+    float: left;
+}
+h2
+{
+    zoom: 100%;
+    margin-left: 55px;
+    float: none;
+    font-family: 'Helvetica';
+    color: rgb(31, 30, 27);
+    text-align: left;
+}
+h3
+{
+    font-weight: 500;
+    font-family: 'Yu Gothic';
+    font-size: 110%;
+    color: rgb(31, 30, 27);
+}
+body
+{
+    user-zoom:fixed ;
+    background:rgb(218, 213, 197); 
+    text-align: left;
+    margin-bottom: 700px;
+    zoom: 100%;
+}
+p
+{
+    zoom: 100%;
+    float: left;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    text-align: left;
+    font-family: 'Yu Gothic';
+    font-size: 105%;
+    color: rgb(31, 30, 27);
+}
+
+@media screen and (max-width: 1600px) 
+{
+    .codeText
+    {
+        display: none
+    }
+    #section2
+    {
+        background:rgb(218, 213, 197); 
+        height: 600px;
+    }
+    #section3
+    {
+        background:rgb(218, 213, 197); 
+        margin-top: 50%;
+        margin-bottom: 50px;
+    }
+    .title
+    {
+        margin: none;
+        float: none;
+        text-align: center; 
+    }
+    .button
+    {
+        margin-right: -35px;
+        width: 100%;
+    }
+    .aboutMe
+    {
+       margin-left: auto;
+    }
+    .myGames
+    {
+        margin-left: -5px;
+        margin-right: -100px;
+        margin-bottom: -50px;
+    }
+    #section1
+    {
+        display: none;
+    }
+    .meString
+    {
+        margin-right: 0;
+        margin-left: 0;
+        font-size: 90%;
+    }
+    .me
+    {
+        margin-right: 10px;
+        margin-bottom: 50px;
+    }
+    .tugboatterror
+    {
+        float: none;
+        width: 100%;
+        margin-top: 50px;
+        margin-right: 300px;
+        margin-left: -50px;
+    }
+    .gameString
+    {
+        font-size: 0;
+    }
+}
+@media screen and (max-width: 900px)
+{
+
+}
+@media screen and (max-width: 770px)
+{
+}
+@media screen and (max-width: 500px)
+{
+}
