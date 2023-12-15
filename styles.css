@@ -1,3 +1,8 @@
+html 
+{
+    scroll-behavior: smooth;
+}
+
 h1 {
     font-size: 8vw;
     color: rgb(255, 247, 231);
@@ -16,6 +21,10 @@ h2 {
     padding-top: 1vw;
 }
 
+#projectsSection
+{
+}
+
 .text {
     font-size: calc(100% + 0.4vw);
     color: rgb(255, 247, 231);
@@ -26,6 +35,12 @@ h2 {
 
 .image {
     width: 200px;
+    float: left;
+    padding: 2vw;
+}
+
+.gameImage {
+    width: 300px;
     float: left;
     padding: 2vw;
 }
@@ -59,8 +74,18 @@ body {
     margin-left: 10px;
 }
 
+.button:hover
+{
+    background-color:#57544aaf;
+}
+
 @media screen and (max-width: 500px) {
     .image {
+        width: 91vw;
+        float: none;
+        padding-right: 100px;
+    }
+    .gameImage {
         width: 91vw;
         float: none;
         padding-right: 100px;
