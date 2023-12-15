@@ -71,6 +71,12 @@ xmp {
     padding: 2vw;
 }
 
+.video {
+    width: 70vw;
+    height: 40vw;
+    padding: 2vw;
+}
+
 .gameImage {
     width: 300px;
     float: left;
@@ -148,6 +154,12 @@ xmp {
     }
     .screenshotImage {
         width: 91vw;
+        float: none;
+        padding-right: 100px;
+    }
+    .video {
+        width: 91vw;
+        height: 200px;
         float: none;
         padding-right: 100px;
     }
