@@ -32,7 +32,11 @@ body {
 /******************************************************************************* 
     Sections
 *******************************************************************************/
-#projectsSection {
+#completedProjectsSection {
+
+}
+
+#currentProjectsSection {
 
 }
 
@@ -72,8 +76,8 @@ xmp {
 }
 
 .video {
-    width: 70vw;
-    height: 40vw;
+    width: 55vw;
+    height: 30vw;
     padding: 2vw;
 }
 
