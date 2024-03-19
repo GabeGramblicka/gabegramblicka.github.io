@@ -23,7 +23,33 @@
         <img class="screenshotImageNoFloat" src="PGE.png" alt="alternatetext">
     </p>
     <div class="clearfix"></div>
-    <h2>Shadow Casting Example:</h2>
+    <h2>Shadow Casting:</h2>
+    <p class="text">For this game, we wanted a dark and scary vibe where the player could
+        easily lose the monster. To do this we needed a flashlight for the player that 
+        interacted with the environment. After lots of hard work this is the solution I came to.
+        <br><br>
+        The code below shows the steps in the algorithm:
+    </p>
+    <pre class="code">
+    void Flashlight::DistanceCull(glm::vec2 pos)
+    {
+
+        Scene* scene = SceneSystem::GetCurrent();
+        Tilemap* tilemap = scene->GetMap();
+        std::vector<LineSegment> const& edges = tilemap->GetEdgePool()._lines;
+        
+        _lines.clear();
+        _culled.clear();
+        for (LineSegment const& line : edges)
+        {
+            <font color="#C7BE98"><i>// Cull based on distance</i></font>
+            if ((glm::length(line._start - pos) < _cullDist) || (glm::length(line._end - pos) < _cullDist))
+            {
+                _culled.push_back(line);
+            }
+        }
+    }
+    </pre>
     <iframe class="video" src="https://www.youtube.com/embed/8xO8nzCwx6s?si=4OjNHnfstPVN_Alv" 
         title="Shadow Casting" frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
