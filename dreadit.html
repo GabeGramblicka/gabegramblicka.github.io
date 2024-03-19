@@ -33,7 +33,6 @@
     <pre class="code">
     void Flashlight::DistanceCull(glm::vec2 pos)
     {
-
         Scene* scene = SceneSystem::GetCurrent();
         Tilemap* tilemap = scene->GetMap();
         std::vector<LineSegment> const& edges = tilemap->GetEdgePool()._lines;
@@ -50,8 +49,105 @@
         }
     }
     </pre>
+    <p class="text">Once we Have these lines we can now remove all the lines that are clearly crossing others. The 
+        IsCrossing function below is a simple point line algorithm.
+    </p>
+    <pre class="code">
+    bool Flashlight::IsCrossingAny(glm::vec2 line, glm::vec2 pos) const
+    {
+        for (unsigned i = 0; i < _culled.size(); ++i)
+        {
+            glm::vec2 dummy(0);
+            if (IsCrossing(_culled[i], pos, line, dummy))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    </pre>
+    <p class="text">After this is called we can now start the tricky stuff. At this point we're basically left with 
+        all the lines going directly to each corner, being the line segment start and end. Our next goal is to 
+        shoot out two more lines for each direct "anchor" line. The 2nd parameter end in the function is rotated slightly 
+        before its passed in. This is done twice, once clockwise and counter-clockwise. The goal is to end up having triangles 
+        that we can pass to the shader.
+    </p>
+    <img class="screenshotImage" style="width: 30%;" src="raycast.png" alt="alternatetext">
+    <pre class="code">
+    bool Flashlight::CastRayExtension(glm::vec2 start, glm::vec2 end, glm::vec2& colPoint) const
+    {
+        glm::vec2 shortestPoint((float)FOREVER, (float)FOREVER);
+        glm::vec2 newLine(0);
+        bool found = false;
+
+        for (LineSegment const& edge : _culled)
+        {
+            <font color="#C7BE98"><i>// We need to get the colPoint with the shortest length from it to pos</i></font>
+            if (IsCrossing(edge, start, end, colPoint))
+            {
+                newLine = colPoint - start;
+                if (glm::length(newLine) < glm::length(shortestPoint))
+                {
+                    shortestPoint = newLine;
+                    found = true;
+                }
+            }
+        }
+        colPoint = shortestPoint + start;
+        return found;
+    }
+    </pre>
+    <p class="text">This is then done for all the lines that we were given. It is then sorted by angle and 
+        pushed into a new vector that we pass to the shader. The cone is also passed to the shader using two vectors.
+    </p>
+    <pre class="text">
+In the shader we want to do a few things:
+    1. Only calculate within the cone 
+    2. Use barycentric coordinates to see if the pixel should be lit
+    3. Make the shader look nicer using feathering and fading
+    </pre>
+    <p class="text">Step 1:
+    </p>
+    <pre class="code">
+        for (int j = 0; j < vertCount[i + 1]; ++j)
+        {
+            if (!IsInsideTriangle(flashlight[vertCount[i]], cone[0], cone[1]))
+            {  
+                continue;
+            }
+        <font color="#C7BE98"><i>// ...</i></font>
+    </pre>
+    <p class="text">Step 2 and 3:
+    </p>
+    <pre class="code">
+    float CalculateFlashlight(vec2 p0, vec2 p1, vec2 p2, float factor, float radius, float falloff, 
+                              float innerRadius, float innerFalloff, vec2 cone0, vec2 cone1)
+    {
+        float spot = 0;
+
+        <font color="#C7BE98"><i>// Use barycentric coords to check inside triangle</i></font>
+        if (IsInsideTriangle(p0, p1, p2))
+        {
+            <font color="#C7BE98"><i>// Feathering the edge of the flashlight</i></font>
+            spot = CalculateSpotlightInverse(p0, radius, factor, falloff, innerRadius, innerFalloff);
+            vec2 middle = cone0 + (0.5 * (cone1 - cone0));
+            float halfAngle = degrees(acos(dot(middle, cone0) / (length(middle) * length(cone0))));
+            vec2 pixelVec = worldPos.xy - p0;
+            float pixelAngle = degrees(acos(dot(pixelVec, middle) / (length(pixelVec) * length(middle))));
+            
+            if (halfAngle - pixelAngle < featherAmount)
+            {
+                return clamp((halfAngle - pixelAngle) / 4.0, 0, spot);
+            }
+        }
+        return spot;
+    }
+</pre>
+    <div class="clearfix"></div>
+    <p class="text">After all this we get the final result:
+    </p>
     <iframe class="video" src="https://www.youtube.com/embed/8xO8nzCwx6s?si=4OjNHnfstPVN_Alv" 
-        title="Shadow Casting" frameborder="0" 
+    title="Shadow Casting" frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowfullscreen>
     </iframe>
