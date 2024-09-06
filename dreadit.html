@@ -15,6 +15,10 @@
         <br><br>
         Made in a custom 2D engine using C++ and OpenGL. 
     </p>
+
+    <img class="screenshotImageNoFloat" src="dreadIt_capture[01].PNG" alt="dreadit1">
+    <img class="screenshotImageNoFloat" src="dreadIt_capture[02].PNG" alt="dreadit2">
+    
     <h2>Pillar Graphics Engine</h2>
     <p class="text">PGE is the general graphics interface for our engine. I wanted to 
         create a sort of library of OpenGL calls abstracted beneath an interface. Sample
@@ -72,7 +76,7 @@
         before its passed in. This is done twice, once clockwise and counter-clockwise. The goal is to end up having triangles 
         that we can pass to the shader.
     </p>
-    <img class="screenshotImage" style="width: 25%;" src="raycast.png" alt="alternatetext">
+    <img class="screenshotImageNoFloat" style="width: 25%; float: right; padding-right: 4vw;" src="raycast.png" alt="alternatetext">
     <pre class="code">
     bool Flashlight::CastRayExtension(glm::vec2 start, glm::vec2 end, glm::vec2& colPoint) const
     {
