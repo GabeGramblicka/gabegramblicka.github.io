@@ -24,6 +24,16 @@ h2 {
     padding-top: 1vw;
 }
 
+h3 {
+    font-size: 110%;
+    color: rgb(255, 247, 231);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0; 
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1vw;
+}
+
 body {
     overflow-x: hidden;
     background-color: rgb(42, 40, 40);
@@ -110,6 +120,11 @@ xmp {
     padding-top: 2vw;
     padding-bottom: 2vw;
     padding-left: 2vw;
+}
+.pdf {
+    padding-top: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 /******************************************************************************* 
@@ -210,5 +225,9 @@ xmp {
         height: 200px;
         float: none;
         padding-right: 100px;
+    }
+    .pdf {
+        width: 340px;
+        height: 420px;
     }
 }
