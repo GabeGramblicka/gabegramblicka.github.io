@@ -120,6 +120,11 @@ xmp {
     align-items: center;
     justify-content: center;
 }
+.button-container-left {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
 
 .button {
     background-color: #57544a75;
@@ -138,6 +143,25 @@ xmp {
     margin-right: 10px;
     margin-left: 10px;
 }
+
+.buttonSmall {
+    background-color: #57544a75;
+    border: none;
+    color: #e6e2d8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 100%;
+    width: 50px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 10px;
+
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 
 /******************************************************************************* 
     Hovering 
