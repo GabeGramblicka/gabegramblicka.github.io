@@ -28,8 +28,41 @@
     The idea was to make a text file where you could place the rocks and swarms quickly to make new levels. One of the best parts 
     about the design of Tugboat Terror is that each level is the same but just a different color. This also would translate to the right minimap screen.
     </p>
-    <img class="screenshotImage" style="width: 10vw;" src="tugboat_mapdata.png" alt="tt2">
-    <p class="text">As you can see its very simple but it gets the job done. </p>
-    
+    <img class="screenshotImage" style="width: 10vw; margin-right: 2vw;" src="tugboat_mapdata.png" alt="tt3">
+    <p class="text">This screenshot shows how periods (.) are lined up in a rectangle where the length is calculated on initialization<br><br>
+    The ampersands (@) are rocks and the percents (%) are swarms. <br><br><br>Doing this results in an exact grid however, which is 
+    easily fixed my adding a random length and direction to each obstacle which makes them appear more natural. </p>
+    <div class="clearfix"></div>
+    <pre class="code">static Vector2D CalculateWorldPos(int oldRow, int oldCol)
+{
+    Vector2D newVec;
+    <font color="#C7BE98"><i>// textScalar, xMin are pre determined based on level screen size</i></font>
+    newVec.x = (float)(oldCol * textScaler) + xMin;
+    newVec.y = (float)abs((oldRow * textScaler) - (rows * textScaler));
+
+    <font color="#C7BE98"><i>// This function is shown below too</i></font>
+    Vector2D randVec = MapDataAddRand();
+    Vector2DAdd(&newVec, &newVec, &randVec);
+
+    return newVec;
+}
+
+
+static Vector2D MapDataAddRand()
+{
+	<font color="#C7BE98"><i>// find a random direction and distance</i></font>
+	float distance = RandomFloat(0.0f, 10.0f);
+	float direction = RandomFloat(0.0f, 360.0f);
+
+	<font color="#C7BE98"><i>// apply that matrix to a new vector</i></font>
+	Vector2D vec;
+	Vector2DSet(&vec, 1, 1);
+	Vector2DNormalize(&vec, &vec);
+	Vector2DFromAngleDeg(&vec, direction);
+	Vector2DScale(&vec, &vec, distance);
+
+	return vec;
+}
+    </pre>
 </body>
 </html>
