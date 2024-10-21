@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gabe Gramblicka - Install Programs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    <h1>Install Programs</h1>
+    <div class="button-container-left">
+        <a href="index.html" class="buttonSmall">Back</a>
+    </div>
+    <div class="clearfix"></div>
+    <p class="text">Install programs is a batch install GUI that installs mutliple programs via winget and/or Chocolatey. 
+        <br>It was made using a basic version of the custom game engine used for <a href="dreadit.html"><i>DREAD IT</i></a>
+        <br><br>Download to the installer can be found <a href="https://github.com/GabeGramblicka/InstallPrograms">here</a>
+    </p>
+    <div class="clearfix"></div>
+    <img class="screenshotImageNoFloat" src="installprograms[1].PNG" alt="ip1">
+    <h2>Code Examples</h2>
+    <p class="text">Below is a snippet of the json file. This was a great way to quickly add new applications. "type" differentiates
+    the categories and tabs in the ImGui interface. The other categories are how the programs are installed and what the package name
+    is for choco and winget. If these didn't exist in command line install form, I also added a way to add the installer, which would be
+    out of date if not updated but nonetheless existed.
+    </p>
+    <pre class="code">
+<font color="#C7BE98"><i>
+{	
+    "7Zip": {
+        "type" : "utilities",
+        "winget": "7zip.7zip",
+        "choco": "7zip",
+        "installer" : "na",
+        "uninstaller" : "na"
+    },
+    "Adobe Acrobat": {
+        "type" : "media",
+        "winget": "Adobe.Acrobat.Reader.64-bit",
+        "choco": "adobereader",
+        "installer" : "na",
+        "uninstaller" : "na"
+    },
+    "AMD Ryzen Master": {
+        "type" : "utilities",
+        "winget": "na",
+        "choco": "amd-ryzen-master",
+        "installer" : "na",
+        "uninstaller" : "na"
+    },
+    "Audacity": {
+        "type" : "media",
+        "winget": "Audacity.Audacity",
+        "choco": "audacity",
+        "installer" : "na",
+        "uninstaller" : "na"
+    }
+    </pre>
+</i>
+    <p class="text">Parsing uses json data and adding to a container</p>
+    <pre class="code">
+void App::Read(Stream& file)
+{
+  try
+  {
+    json jsonData = file.Get();
+
+    for (const auto& item : jsonData.items()) {
+      const String key = item.key();
+      const String choco = item.value()["choco"];
+      const String winget = item.value()["winget"];
+      const String type = item.value()["type"];
+      const String installer = item.value()["installer"];
+      const String uninstaller = item.value()["uninstaller"];
+  
+      App app(key, choco, winget, installer, uninstaller, type);
+      apps.push_back(app);
+    }
+  }
+  catch (const std::exception& e) 
+  {
+    std::cerr << "Error parsing JSON: " << e.what() << std::endl;
+    return;
+  }
+}
+    </pre>
+    <p class="text">After the parsing is done, multiple tries of installs are made. Thinking back to the code, this could have been 
+        better implemented using a state machine rather than multiple if else checks. 
+    </p>
+    <pre class="code">
+void App::Find(int _stall)
+{
+  String stall;
+  _stall == 1 ? stall = "install " : stall = "uninstall ";
+  
+  int err = 0;
+  if (_winget == "na") {
+    err = -1;
+  }
+  else {
+    <font color="#C7BE98"><i>// first try winget</i></font>
+    stall.insert(0, "winget ");
+    _winget.insert(0, stall);
+    std::cout << "";
+    err = std::system(_winget.c_str());
+  }
+  
+  if (err != 1 && err != 0) {
+    if (_choco == "na") {
+        err = -1;
+    }
+    else {
+      <font color="#C7BE98"><i>// then try choco</i></font>
+      stall.insert(0, "choco ");
+      _choco.insert(0, stall);
+      std::cout << "";
+      int err = std::system(_choco.c_str());
+    }
+
+    if (err != 1 && err != 0) {
+      if (_installer == "na") {
+        std::cerr << "Installation failed\n";
+      }
+      else {
+        std::cout << "";
+        _installer.insert(0, ".\\Data\\Executables\\");
+        _uninstaller.insert(0, ".\\Data\\Executables\\");
+        if (_stall == 1) {
+            err = std::system(_installer.c_str());
+        }
+        else {
+            err = std::system(_uninstaller.c_str());
+        }
+        if (err != 1) {
+            std::cerr << "Installation failed\n";
+        }
+      }
+    }
+  }
+}
+    </pre>
+</body>
+</html>
