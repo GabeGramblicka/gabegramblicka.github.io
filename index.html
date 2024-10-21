@@ -12,6 +12,27 @@
         <div>
             <h1>Gabe<br>Gramblicka</h1>  
         </div>
+        <!-- button onclick="switchAllClasses()">Switch Class</button> 
+
+        <script>
+          function switchAllClasses() {
+            var elements = document.querySelectorAll('.textDark, .textLight');
+            
+            elements.forEach(function(element) {
+              if (element.classList.contains('textDark')) {
+                element.classList.remove('textDark');
+                element.classList.add('textLight');
+                document.body.style.backgroundColor = "rgb(42, 40, 40)";
+              } 
+              else if (element.classList.contains('textLight')) {
+                element.classList.remove('textLight');
+                element.classList.add('textDark');
+                document.body.style.backgroundColor = "rgb(255, 247, 231)";
+              }
+            });
+          }
+        </script> -->
+        
         <div class="button-container">
             <a href="#currentProjectsSection" class="button">Projects</a>
             <a href="https://github.com/GabeGramblicka" target="_blank" class="button">GitHub</a>
@@ -24,7 +45,7 @@
           <a href="https://www.linkedin.com/in/gabe-gramblicka" target="_blank" rel="noopener noreferrer">
             <img class="image" src="me.jpg" alt="alternatetext">
           </a>
-          <p class="text">Hello, I'm a game developer captivated with technically and emotionally complex games 
+          <p class="textDark">Hello, I'm a game developer captivated with technically and emotionally complex games 
             and their impact on the world. I am a computer science student at DigiPen 
             Institute of Technology in Redmond, WA, USA focusing on game engine
             architecture and graphics. With this, I'm living out my 
@@ -65,7 +86,7 @@
         </div>
         <h2 style="clear: left;">Contact</h2>
         <div id="contactSection">
-        <p class="text">You can contact me at
+        <p class="textDark">You can contact me at
           <a href="mailto:gabegramblicka@gmail.com" >gabegramblicka@gmail.com</a>
           <br>or my <a href="https://www.linkedin.com/in/gabe-gramblicka">LinkedIn</a> if you prefer. </p>
             <h3 style="clear: left;">Resume</h3>

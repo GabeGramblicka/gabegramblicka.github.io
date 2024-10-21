@@ -11,14 +11,14 @@
         <a href="index.html" class="buttonSmall">Back</a>
     </div>
     <div class="clearfix"></div>
-    <p class="text">Install programs is a batch install GUI that installs mutliple programs via winget and/or Chocolatey. 
+    <p class="textDark">Install programs is a batch install GUI that installs mutliple programs via winget and/or Chocolatey. 
         <br>It was made using a basic version of the custom game engine used for <a href="dreadit.html"><i>DREAD IT</i></a>
         <br><br>Download to the installer can be found <a href="https://github.com/GabeGramblicka/InstallPrograms">here</a>
     </p>
     <div class="clearfix"></div>
     <img class="screenshotImageNoFloat" src="installprograms[1].PNG" alt="ip1">
     <h2>Code Examples</h2>
-    <p class="text">Below is a snippet of the json file. This was a great way to quickly add new applications. "type" differentiates
+    <p class="textDark">Below is a snippet of the json file. This was a great way to quickly add new applications. "type" differentiates
     the categories and tabs in the ImGui interface. The other categories are how the programs are installed and what the package name
     is for choco and winget. If these didn't exist in command line install form, I also added a way to add the installer, which would be
     out of date if not updated but nonetheless existed.
@@ -56,7 +56,7 @@
     }
     </pre>
 </i>
-    <p class="text">Parsing uses json data and adding to a container</p>
+    <p class="textDark">Parsing uses json data and adding to a container</p>
     <pre class="code">
 void App::Read(Stream& file)
 {
@@ -83,7 +83,7 @@ void App::Read(Stream& file)
   }
 }
     </pre>
-    <p class="text">After the parsing is done, multiple tries of installs are made. Thinking back to the code, this could have been 
+    <p class="textDark">After the parsing is done, multiple tries of installs are made. Thinking back to the code, this could have been 
         better implemented using a state machine rather than multiple if else checks. 
     </p>
     <pre class="code">
