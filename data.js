@@ -17,7 +17,7 @@ const data = {
       "programmer": "\"Intelligence is the ability to avoid doing work, yet getting the work done.\"\n\t- Linus Torvalds, Creator of Linux and Git"
     },
     {
-      "fact": "The average person blinks 15-20 times per minute, but when using a computer, they only blink 7 times per minute! That's why your eyes can feel dry after screen time.",
+      "fact": "Programmers use pre existing programming lanuages to make new ones, and once it has become more advanced, can use its own language to write new code for itself",
       "programmer": "\"Intelligence is the ability to avoid doing work, yet getting the work done.\"\n\t- Linus Torvalds, Creator of Linux and Git"
     },
   ]
