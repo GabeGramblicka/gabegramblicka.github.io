@@ -5,39 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gabe Gramblicka</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body class="termText">
     <main>
         <script>
-        const password = prompt("Enter password:");
-        if (password !== "codingisfun") {
-            window.location.href = "index.html";
-        }
+        //const password = prompt("Enter password:");
+        //if (password !== "codingisfun") {
+        //    window.location.href = "index.html";
+        //}
         </script>
+
         
         <div class="terminal">
             <div class="terminal-header">
                 <span class="terminal-button btn-close"></span>
                 <span class="terminal-button btn-minimize"></span>
                 <span class="terminal-button btn-maximize"></span>
-                <span class="terminal-title">terminal — coding-facts — 80×24</span>
+                <span class="terminal-title">terminal — coding-facts — 80x24</span>
             </div>
             <div class="terminal-body flicker">
                 <pre id="ascii-art"></pre>
                 <div class="fact-section">
                     <div class="fact-label">$ ./get_fact.sh</div>
-                    <div class="fact-text" id="fact-text">
-Did you know? The first computer bug was an actual bug - a moth found trapped in a relay of the Harvard Mark II computer in 1947. Grace Hopper taped it to the log book with the note "First actual case of bug being found."<span class="cursor"></span>
-                    </div>
+                    <p class="fact-text" id="fact"></p>
                     <div class="fact-label">$ ./get_programmer.sh</div>
-                    <div class="fact-text" id="fact-text">
-    "The cost of adding a feature isn't just the time it takes to code it. The cost also includes the addition of an obstacle to future expansion. The trick is to pick the features that don't fight each other."
-        - John Carmack, Creator of DOOM </div>
+                    <p class="fact-text" id="programmer"><span class="cursor"></span> </p>
                 </div>
                 <div class="scanline"></div>
             </div>
         </div>
+        <script src="./data.js"></script>
+        <script>
+            function getRandomInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            let rand1 = getRandomInt(0, 2);
+            let rand2 = getRandomInt(0, 2);
+            const selectedItem1 = data.posts[rand1];
+            document.getElementById('fact').textContent = selectedItem1.fact;
+            const selectedItem2 = data.posts[rand2];
+            document.getElementById('programmer').textContent = selectedItem2.programmer;
+        </script>
         <script>
         const frames = [
             `
