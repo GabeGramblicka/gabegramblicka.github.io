@@ -36,7 +36,19 @@ h3 {
 
 body {
     overflow-x: hidden;
+    overflow: hidden;
     background-color: rgb(42, 40, 40);
+}
+
+.termText {
+    margin: 0;
+    padding: 20px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
 }
 
 /******************************************************************************* 
@@ -67,9 +79,152 @@ body {
 .textDark {
     font-size: calc(80% + 0.4vw);
     color: rgb(255, 247, 231);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0; 
-    padding: 2vw;
+    font-family:'PathwayGothicOne';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    /*margin: 0; 
+    padding: 2vw;*/
+}
+
+.crt-frame {
+    background: linear-gradient(to bottom, #e8e4d8, #d4cdb8);
+    padding: 25px 25px 35px 25px;
+    border-radius: 20px;
+    box-shadow: 
+        inset 0 2px 10px rgba(255, 255, 255, 0.3),
+        inset 0 -2px 10px rgba(0, 0, 0, 0.075),
+        0 15px 50px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+.crt-frame::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 8px;
+    background: #b8b0a0;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+.crt-frame::after {
+    content: 'IBM';
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    color: #8a8578;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.terminal {
+    background-color: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 0px;
+    overflow: hidden;
+}
+.terminal-header {
+    background: linear-gradient(to bottom, #3a3a3a, #2a2a2a);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #444;
+}
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.btn-close { background-color: #ff5f56; }
+.btn-minimize { background-color: #ffbd2e; }
+.btn-maximize { background-color: #27c93f; }
+.terminal-title {
+    color: #999;
+    font-size: 12px;
+    margin-left: 10px;
+    flex-grow: 1;
+    text-align: center;
+}
+.terminal-body {
+    padding: 20px;
+    background-color: #0a0a0a;
+}
+pre {
+    color: #00ff00;
+    font-size: 13px;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
+    letter-spacing: 0px;
+}
+.scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(0, 0, 0, 0.1) 51%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    animation: scanline 8s linear infinite;
+}
+.fact-section {
+    margin-top: 30px;
+    padding: 15px;
+    color: #00ff00;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.fact-label {
+    color: #00cc00;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.fact-text {
+    color: #4dda4d;
+    padding-left: 10px;
+    max-width: 600px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background-color: #00ff00;
+    animation: blink 1s infinite;
+}
+@keyframes scanline {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100%); }
+}
+.flicker {
+    animation: flicker 0.15s infinite;
+}
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.97; }
+}
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+#ascii {
+    font-family: monospace;
+    color: rgb(255, 247, 231);
+    white-space: pre;
+    line-height: 1;
+    color: #4AF262
 }
 
 .textLight {
@@ -133,6 +288,11 @@ xmp {
     padding-top: 1vw;
     padding-left: 2vw;
     padding-right: 2vw;
+}
+
+@font-face {
+  font-family: 'PathwayGothicOne';
+  src: url('PathwayGothicOne-Regular.ttf');
 }
 
 /******************************************************************************* 
