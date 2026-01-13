@@ -20,5 +20,9 @@ const data = {
       "fact": "Programmers use pre existing programming lanuages to make new ones, and once it has become more advanced, can use its own language to write new code for itself",
       "programmer": "\"Intelligence is the ability to avoid doing work, yet getting the work done.\"\n\t- Linus Torvalds, Creator of Linux and Git"
     },
+    {
+      "fact": "This web page was made using HTML, CSS, and JavaScript!",
+      "programmer": "\"The primary job of a game designer is not to make something fun, but to find the fun.\"\n\t- Sid Meier, Creator of the Civilization series"
+    },
   ]
 };
