@@ -40,8 +40,8 @@
             function getRandomInt(min, max) {
                 return Math.floor(Math.random() * (max - min + 1)) + min;
             }
-            let rand1 = getRandomInt(0, 2);
-            let rand2 = getRandomInt(0, 2);
+            let rand1 = getRandomInt(0, data.posts.length - 1);
+            let rand2 = getRandomInt(0, data.posts.length - 1);
             const selectedItem1 = data.posts[rand1];
             document.getElementById('fact').textContent = selectedItem1.fact;
             const selectedItem2 = data.posts[rand2];

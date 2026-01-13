@@ -14,7 +14,11 @@ const data = {
     },
     {
       "fact": "The average person blinks 15-20 times per minute, but when using a computer, they only blink 7 times per minute! That's why your eyes can feel dry after screen time.",
-      "programmer": "\t\"The only phrase I've ever disliked is, 'Why, we've always done it that way,'\"\n\t- Grace Hopper, Who found the first computer bug"
+      "programmer": "\"Intelligence is the ability to avoid doing work, yet getting the work done.\"\n\t- Linus Torvalds, Creator of Linux and Git"
+    },
+    {
+      "fact": "The average person blinks 15-20 times per minute, but when using a computer, they only blink 7 times per minute! That's why your eyes can feel dry after screen time.",
+      "programmer": "\"Intelligence is the ability to avoid doing work, yet getting the work done.\"\n\t- Linus Torvalds, Creator of Linux and Git"
     },
   ]
 };
