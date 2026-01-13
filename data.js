@@ -24,5 +24,21 @@ const data = {
       "fact": "This web page was made using HTML, CSS, and JavaScript!",
       "programmer": "\"The primary job of a game designer is not to make something fun, but to find the fun.\"\n\t- Sid Meier, Creator of the Civilization series"
     },
+    {
+      "fact": "Some programs or operating systems are open source. This means that anyone can look at the source code!",
+      "programmer": "\"Good ideas have no borders\"\n\t- Alexey Pajitnov, Creator of Tetris"
+    },
+    {
+      "fact": "WiFi doesn't actually stand for anything! The creators just thought it sounded cool and catchy, like \"Hi-Fi\" for stereos.",
+      "programmer": "\"One of my most productive days was throwing away 1000 lines of code.\"\n\t- Ken Thompson, Creator of Unix and the B programming language"
+    },
+    {
+      "fact": "The term \"cookie\" in computer cookies comes from \"fortune cookies\" because they both contain little pieces of information inside!",
+      "programmer": "\"When you feel the need to write a comment, first try to refactor the code so that any comment becomes superfluous.\"\n\t- Martin Fowler, contributor to object oriented design"
+    },
+    {
+      "fact": "The \"QWERTY\" keyboard layout was designed to be slow to type on. It was originally made for typewriters so that users wouldn't jam the keys as easily",
+      "programmer": "\"There are only two kinds of languages: the ones people complain about and the ones nobody uses.\"\n\t- Bjarne Stroustrup, Creator of C++"
+    },
   ]
 };
