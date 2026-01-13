@@ -291,8 +291,8 @@ xmp {
 }
 
 @font-face {
-  font-family: 'PathwayGothicOne';
-  src: url('PathwayGothicOne-Regular.ttf');
+    font-family: 'PathwayGothicOne';
+    src: url('./PathwayGothicOne-Regular.ttf') format('truetype');
 }
 
 /******************************************************************************* 
