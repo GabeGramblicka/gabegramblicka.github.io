@@ -192,7 +192,7 @@ pre {
 .fact-text {
     color: #4dda4d;
     padding-left: 10px;
-    max-width: 600px;
+    max-width: 480px;
     word-wrap: break-word;
     white-space: pre-wrap;
 }
